@@ -51,6 +51,22 @@ body {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+.topo input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ced4da;
+}
+.topo input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ced4da;
+}
+.topo input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ced4da;
+}
+.topo input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ced4da;
+}
 .topo .fas {
   color: #343a40;
   background-color: #fff;
@@ -85,8 +101,12 @@ main .container {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   padding: 30px 20px 0;
+  margin-bottom: 40px;
 }
 main .heading {
   padding-bottom: 20px;
@@ -141,7 +161,7 @@ main ul li .button {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
-  border: 1px solid #f1f3f5;
+  border: 1px solid #ced4da;
   width: 100%;
   padding: 10px 20px;
   display: block;

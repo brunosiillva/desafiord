@@ -30,6 +30,25 @@
   -o-transition: all @duration @ease;
   transition: all @duration @ease;
 }
+.drop-shadow(@x-axis: 0, @y-axis: 5px, @blur: 15px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+.placeholder(@color: @gray4){
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: @color;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: @color;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: @color;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: @color;
+  }
+}
 
 *{
   outline: none;
@@ -68,6 +87,7 @@ body{
     border: none;
     padding: 15px;
     .borderradius(0, 0, @radius, @radius);
+    .placeholder();
   }
   .fas{
     color: @gray8;
@@ -81,8 +101,10 @@ main{
   margin-top: -80px;
   .container{
     .borderradius(@radius, @radius, @radius, @radius);
+    .drop-shadow();
     background-color: #fff;
     padding: 30px 20px 0;
+    margin-bottom: 40px;
   }
   .heading{
     padding-bottom: 20px;
@@ -128,7 +150,7 @@ main{
         color: @gray4;
         text-align: center;
         .borderradius(@radius, @radius, @radius, @radius);
-        border: 1px solid @gray1;
+        border: 1px solid @gray4;
         width: 100%;
         padding: 10px 20px;
         display: block;
