@@ -15,6 +15,33 @@ body {
   font-family: 'Fira Sans', sans-serif;
   background-color: #f1f3f5;
 }
+.buttonbuy {
+  color: #ced4da;
+  text-align: center;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  margin-top: 20px;
+}
+.buttonbuy:hover,
+.buttonbuy.active {
+  border-color: transparent;
+  background-color: #f03e3e;
+  color: #fff;
+}
 .topo {
   background-image: url(../images/bg-topo.jpg);
   background-position: center top;
@@ -67,7 +94,7 @@ body {
   /* Firefox 18- */
   color: #ced4da;
 }
-.topo .fas {
+.topo .fa-search {
   color: #343a40;
   background-color: #fff;
   padding: 18px 20px 20px 10px;
@@ -84,6 +111,14 @@ body {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+.topo .link {
+  font-size: 12px;
+  margin-top: 40px;
+  display: block;
+}
+.topo .link a {
+  color: #fff;
 }
 main {
   margin-top: -80px;
@@ -146,29 +181,31 @@ main ul li img {
 main ul li .book:hover h3 {
   color: #1864ab;
 }
-main ul li .button {
-  color: #ced4da;
-  text-align: center;
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
-  border: 1px solid #ced4da;
-  width: 100%;
-  padding: 10px 20px;
+.aberto .image img {
   display: block;
-  margin-top: 20px;
+  margin: 0 auto;
 }
-main ul li .button:hover {
-  border-color: transparent;
-  background-color: #f03e3e;
-  color: #fff;
+.aberto h2 {
+  font-size: 26px;
+  line-height: 1em;
+  font-weight: 700;
+}
+.aberto small {
+  font-size: 12px;
+  color: #ced4da;
+  display: block;
+  width: 100%;
+}
+.aberto span {
+  display: block;
+  font-size: 14px;
+  color: #ced4da;
+}
+.aberto span.original {
+  text-decoration-line: line-through;
+}
+.aberto span.final {
+  font-size: 30px;
+  color: #f76707;
+  font-weight: 700;
 }
