@@ -1,6 +1,7 @@
 // out: style.css
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,700');
 @gray1: #f1f3f5;
+@gray4: #ced4da;
 @gray8: #343a40;
 @radius: 5px;
 
@@ -32,7 +33,6 @@ body{
   background-repeat: no-repeat;
   color: #fff;
   font-weight: 300;
-  // overflow: hidden;
   .row{
     height: 550px;
   }
@@ -59,9 +59,17 @@ body{
   }
 }
 main{
+  margin-top: -80px;
   .container{
     .borderradius(@radius, @radius, @radius, @radius);
     background-color: #fff;
-    padding: 40px;
+    padding: 30px 20px;
+  }
+  .heading{
+    padding-bottom: 20px;
+    border-bottom: 1px solid @gray1;
+    .fas{
+      color: @gray4;
+    }
   }
 }

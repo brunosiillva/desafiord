@@ -59,6 +59,9 @@ body {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
+main {
+  margin-top: -80px;
+}
 main .container {
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -73,5 +76,12 @@ main .container {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   background-color: #fff;
-  padding: 40px;
+  padding: 30px 20px;
+}
+main .heading {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f1f3f5;
+}
+main .heading .fas {
+  color: #ced4da;
 }
