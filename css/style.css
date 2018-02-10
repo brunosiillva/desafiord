@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,700');
+* {
+  outline: none;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+a:hover {
+  text-decoration: none;
+}
 body {
   padding: 0;
   margin: 0;
@@ -24,7 +34,7 @@ body {
   display: block;
 }
 .topo input {
-  width: 280px;
+  width: 300px;
   margin-top: 20px;
   border: none;
   padding: 15px;
@@ -76,7 +86,7 @@ main .container {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   background-color: #fff;
-  padding: 30px 20px;
+  padding: 30px 20px 0;
 }
 main .heading {
   padding-bottom: 20px;
@@ -84,4 +94,61 @@ main .heading {
 }
 main .heading .fas {
   color: #ced4da;
+}
+main ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+main ul li {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main ul li h3 {
+  margin-top: 30px;
+  color: #343a40;
+  font-size: 18px;
+  line-height: 1em;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+}
+main ul li small {
+  font-size: 12px;
+  color: #343a40;
+  display: block;
+  width: 100%;
+}
+main ul li img {
+  display: block;
+  margin: 0 auto;
+}
+main ul li .book:hover h3 {
+  color: #1864ab;
+}
+main ul li .button {
+  color: #ced4da;
+  text-align: center;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #f1f3f5;
+  width: 100%;
+  padding: 10px 20px;
+  display: block;
+  margin-top: 20px;
+}
+main ul li .button:hover {
+  border-color: transparent;
+  background-color: #f03e3e;
+  color: #fff;
 }
