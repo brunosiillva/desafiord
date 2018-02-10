@@ -1,0 +1,67 @@
+// out: style.css
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,700');
+@gray1: #f1f3f5;
+@gray8: #343a40;
+@radius: 5px;
+
+.borderradius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  background-color: @gray1;
+}
+.topo{
+  background-image: url(../images/bg-topo.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: 300;
+  // overflow: hidden;
+  .row{
+    height: 550px;
+  }
+  h1{
+    font-size: 18px;
+    strong{
+      font-size: 60px;
+      display: block;
+    }
+  }
+  input{
+    width: 280px;
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+    .borderradius(0, 0, @radius, @radius);
+  }
+  .fas{
+    color: @gray8;
+    background-color: #fff;
+    padding: 18px 20px 20px 10px;
+    margin-left: -4px;
+    .borderradius(@radius, @radius, 0, 0);
+  }
+}
+main{
+  .container{
+    .borderradius(@radius, @radius, @radius, @radius);
+    background-color: #fff;
+    padding: 40px;
+  }
+}
