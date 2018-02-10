@@ -206,6 +206,7 @@ main{
     }
   }
   .frete{
+    margin-top: 50px;
     span{
       color: @gray8;
     }
@@ -213,6 +214,8 @@ main{
       border-top: 1px solid @gray4;
       border-left: 1px solid @gray4;
       border-bottom: 1px solid @gray4;
+      width: 150px;
+      margin-top: 0;
     }
     button{
       background-color: #fff;
@@ -224,6 +227,17 @@ main{
       color: @gray6;
       padding: 14px 10px 12px 0;
       margin-left: -4px;
+    }
+    .field, .text{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .text{
+      margin-left: 5px;
+      span{
+        font-size: 12px;
+        color: @gray8;
+      }
     }
   }
 }
