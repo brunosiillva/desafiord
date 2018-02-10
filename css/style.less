@@ -80,6 +80,15 @@ body{
     color: #fff;
   }
 }
+.input{
+  width: 300px;
+  margin-top: 20px;
+  border: none;
+  padding: 15px;
+  .borderradius(0, 0, @radius, @radius);
+  .placeholder();
+}
+
 .topo{
   background-image: url(../images/bg-topo.jpg);
   background-position: center top;
@@ -96,14 +105,6 @@ body{
       font-size: 60px;
       display: block;
     }
-  }
-  input{
-    width: 300px;
-    margin-top: 20px;
-    border: none;
-    padding: 15px;
-    .borderradius(0, 0, @radius, @radius);
-    .placeholder();
   }
   .fa-search{
     color: @gray8;
@@ -202,6 +203,11 @@ main{
       font-size: 30px;
       color: @orange7;
       font-weight: 700;
+    }
+  }
+  .frete{
+    span{
+      color: @gray8;
     }
   }
 }

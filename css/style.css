@@ -42,25 +42,7 @@ body {
   background-color: #f03e3e;
   color: #fff;
 }
-.topo {
-  background-image: url(../images/bg-topo.jpg);
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-weight: 300;
-}
-.topo .row {
-  height: 550px;
-}
-.topo h1 {
-  font-size: 18px;
-}
-.topo h1 strong {
-  font-size: 60px;
-  display: block;
-}
-.topo input {
+.input {
   width: 300px;
   margin-top: 20px;
   border: none;
@@ -78,21 +60,39 @@ body {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
-.topo input::-webkit-input-placeholder {
+.input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: #ced4da;
 }
-.topo input::-moz-placeholder {
+.input::-moz-placeholder {
   /* Firefox 19+ */
   color: #ced4da;
 }
-.topo input:-ms-input-placeholder {
+.input:-ms-input-placeholder {
   /* IE 10+ */
   color: #ced4da;
 }
-.topo input:-moz-placeholder {
+.input:-moz-placeholder {
   /* Firefox 18- */
   color: #ced4da;
+}
+.topo {
+  background-image: url(../images/bg-topo.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-weight: 300;
+}
+.topo .row {
+  height: 550px;
+}
+.topo h1 {
+  font-size: 18px;
+}
+.topo h1 strong {
+  font-size: 60px;
+  display: block;
 }
 .topo .fa-search {
   color: #343a40;
@@ -208,4 +208,7 @@ main ul li .book:hover h3 {
   font-size: 30px;
   color: #f76707;
   font-weight: 700;
+}
+.aberto .frete span {
+  color: #343a40;
 }
