@@ -81,6 +81,22 @@ body {
   /* Firefox 18- */
   color: #ced4da;
 }
+.input.form {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #ced4da;
+  width: 90%;
+}
 .frete {
   margin-top: 50px;
 }
@@ -341,4 +357,47 @@ main ul li .book:hover h3 {
 }
 .checkout .frete {
   margin-top: 0;
+}
+.payment .container {
+  padding-bottom: 40px;
+}
+.payment h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.payment h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.payment p {
+  font-weight: 300;
+  color: #868e96;
+  font-size: 12px;
+}
+.payment p a {
+  color: #868e96;
+  font-weight: 700;
+}
+.payment label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #868e96;
+  width: 100%;
+}
+.payment .input {
+  margin-top: 0;
+  width: 100%;
+}
+.payment .form-control:focus {
+  box-shadow: none;
+}
+.payment .form-check {
+  padding-left: 30px;
+}
+.payment .form-check input[type="radio"] {
+  margin-left: -30px;
+}
+.payment .select {
+  height: 46px !important;
 }

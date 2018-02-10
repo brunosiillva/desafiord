@@ -95,6 +95,11 @@ body{
   padding: 10px 15px;
   .borderradius(0, 0, @radius, @radius);
   .placeholder();
+  &.form{
+    .borderradius(@radius, @radius, @radius, @radius);
+    border: 1px solid @gray4;
+    width: 90%;
+  }
 }
 .frete{
   margin-top: 50px;
@@ -330,5 +335,50 @@ main{
   }
   .frete{
     margin-top: 0;
+  }
+}
+.payment{
+  .container{
+    padding-bottom: 40px;
+  }
+  h2{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+  h3{
+    font-size: 18px;
+    font-weight: 700;
+  }
+  p{
+    font-weight: 300;
+    color: @gray6;
+    font-size: 12px;
+    a{
+      color: @gray6;
+      font-weight: 700;
+    }
+  }
+  label{
+    font-size: 14px;
+    font-weight: 700;
+    color: @gray6;
+    width: 100%;
+  }
+  .input{
+    margin-top: 0;
+    width: 100%;
+  }
+  .form-control:focus{
+    box-shadow: none;
+  }
+  .form-check{
+    padding-left: 30px;
+    input[type="radio"]{
+      margin-left: -30px;
+    }
+  }
+  .select{
+    height: 46px !important;
   }
 }
