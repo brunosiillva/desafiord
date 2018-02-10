@@ -255,16 +255,8 @@ main ul li h3 {
   margin-top: 30px;
   color: #343a40;
 }
-main ul li img {
-  display: block;
-  margin: 0 auto;
-}
 main ul li .book:hover h3 {
   color: #1864ab;
-}
-.aberto .image img {
-  display: block;
-  margin: 0 auto;
 }
 .aberto span {
   display: block;
@@ -319,8 +311,6 @@ main ul li .book:hover h3 {
   padding-bottom: 20px;
 }
 .checkout .product img {
-  display: block;
-  margin: 0 auto;
   height: 100px;
 }
 .checkout .product .title {
