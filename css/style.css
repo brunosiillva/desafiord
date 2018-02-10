@@ -46,7 +46,7 @@ body {
   width: 300px;
   margin-top: 20px;
   border: none;
-  padding: 15px;
+  padding: 10px 15px;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 5px;
@@ -97,7 +97,7 @@ body {
 .topo .fa-search {
   color: #343a40;
   background-color: #fff;
-  padding: 18px 20px 20px 10px;
+  padding: 13px 20px 15px 10px;
   margin-left: -4px;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -211,4 +211,31 @@ main ul li .book:hover h3 {
 }
 .aberto .frete span {
   color: #343a40;
+}
+.aberto .frete input {
+  border-top: 1px solid #ced4da;
+  border-left: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+}
+.aberto .frete button {
+  background-color: #fff;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 1px solid #ced4da;
+  border-left: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: #868e96;
+  padding: 14px 10px 12px 0;
+  margin-left: -4px;
 }

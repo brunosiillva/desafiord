@@ -84,7 +84,7 @@ body{
   width: 300px;
   margin-top: 20px;
   border: none;
-  padding: 15px;
+  padding: 10px 15px;
   .borderradius(0, 0, @radius, @radius);
   .placeholder();
 }
@@ -109,7 +109,7 @@ body{
   .fa-search{
     color: @gray8;
     background-color: #fff;
-    padding: 18px 20px 20px 10px;
+    padding: 13px 20px 15px 10px;
     margin-left: -4px;
     .borderradius(@radius, @radius, 0, 0);
   }
@@ -208,6 +208,22 @@ main{
   .frete{
     span{
       color: @gray8;
+    }
+    input{
+      border-top: 1px solid @gray4;
+      border-left: 1px solid @gray4;
+      border-bottom: 1px solid @gray4;
+    }
+    button{
+      background-color: #fff;
+      .borderradius(@radius, @radius, 0, 0);
+      border: 1px solid @gray4;
+      border-left: none;
+      font-size: 12px;
+      font-weight: 700;
+      color: @gray6;
+      padding: 14px 10px 12px 0;
+      margin-left: -4px;
     }
   }
 }
