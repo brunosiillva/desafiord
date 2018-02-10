@@ -271,3 +271,13 @@ main ul li .book:hover h3 {
   font-size: 14px;
   line-height: 21px;
 }
+.aberto .related {
+  border-top: 1px solid #ced4da;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+.aberto .related h5 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #343a40;
+}
