@@ -7,7 +7,11 @@
 @gray8: #343a40;
 @gray9: #212529;
 @red7: #f03e3e;
+@red8: #e03131;
+@red9: #c92a2a;
 @green7: #37b24d;
+@green8: #2f9e44;
+@green9: #2b8a3e;
 @blue9: #1864ab;
 @orange7: #f76707;
 @radius: 5px;
@@ -59,7 +63,6 @@
 a:hover{
   text-decoration: none;
 }
-
 body{
   padding: 0;
   margin: 0;
@@ -88,7 +91,6 @@ small{
   display: block;
   width: 100%;
 }
-
 .buttonbuy{
   color: @gray4;
   text-align: center;
@@ -103,10 +105,16 @@ small{
     background-color: @red7;
     color: #fff;
   }
+  &:hover{
+    background-color: @red9;
+  }
   &.btncheckout{
     background-color: @green7;
     color: #fff;
     border-color: transparent;
+    &:hover{
+      background-color: @green9;
+    }
   }
 }
 .input{

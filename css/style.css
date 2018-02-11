@@ -64,10 +64,16 @@ small {
   background-color: #f03e3e;
   color: #fff;
 }
+.buttonbuy:hover {
+  background-color: #c92a2a;
+}
 .buttonbuy.btncheckout {
   background-color: #37b24d;
   color: #fff;
   border-color: transparent;
+}
+.buttonbuy.btncheckout:hover {
+  background-color: #2b8a3e;
 }
 .input {
   width: 300px;
