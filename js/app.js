@@ -28,7 +28,7 @@ myApp.config(function ($routeProvider, $locationProvider) {
 });
 myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function() {
-    console.log($location.path());
+    $rootScope.currentRoute = $location.path();
   });
 }]);
 //ngRoute fim
@@ -41,7 +41,6 @@ myApp.controller('listaLivros', function($scope, $http){
      url: 'https://www.googleapis.com/books/v1/volumes?q=star+wars'
   }).then(function (success){
     $scope.books = success.data.items;
-    // console.log(success.data.items, 'Informacoes pegas com sucesso');
     // console.log('Informacoes pegas com sucesso');
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');

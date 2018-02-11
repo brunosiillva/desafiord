@@ -83,7 +83,6 @@ a h3.name:hover {
 }
 .input {
   width: 300px;
-  margin-top: 20px;
   border: none;
   padding: 10px 15px;
   -webkit-border-top-right-radius: 0;
@@ -98,6 +97,9 @@ a h3.name:hover {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
+  border-top: 1px solid #ced4da;
+  border-left: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
 }
 .input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -195,24 +197,6 @@ a h3.name:hover {
   font-size: 60px;
   display: block;
 }
-.topo .fa-search {
-  color: #343a40;
-  background-color: #fff;
-  padding: 13px 20px 15px 10px;
-  margin-left: -4px;
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-top-left-radius: 0;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-topleft: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
 .topo .link {
   font-size: 12px;
   margin-top: 40px;
@@ -244,12 +228,46 @@ main .container {
   padding: 30px 20px;
   margin-bottom: 40px;
 }
+main .fa-search {
+  color: #343a40;
+  background-color: #fff;
+  padding: 13px 20px 15px 10px;
+  margin-left: -4px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top: 1px solid #ced4da;
+  border-right: 1px solid #ced4da;
+  border-bottom: 1px solid #ced4da;
+}
+main .back a {
+  font-size: 14px;
+  color: #343a40;
+}
+main .back a:hover {
+  color: #1864ab;
+}
+main .back a i {
+  font-size: 10px;
+}
 main .heading {
   padding-bottom: 20px;
   border-bottom: 1px solid #f1f3f5;
 }
 main .heading .fas {
   color: #ced4da;
+}
+main .heading.open {
+  margin-bottom: 40px;
 }
 main ul {
   padding: 0;

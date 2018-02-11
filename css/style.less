@@ -129,11 +129,14 @@ a{
 }
 .input{
   width: 300px;
-  margin-top: 20px;
+  // margin-top: 20px;
   border: none;
   padding: 10px 15px;
   .borderradius(0, 0, @radius, @radius);
   .placeholder();
+  border-top: 1px solid @gray4;
+  border-left: 1px solid @gray4;
+  border-bottom: 1px solid @gray4;
   &.form{
     .borderradius(@radius, @radius, @radius, @radius);
     border: 1px solid @gray4;
@@ -195,13 +198,6 @@ a{
       display: block;
     }
   }
-  .fa-search{
-    color: @gray8;
-    background-color: #fff;
-    padding: 13px 20px 15px 10px;
-    margin-left: -4px;
-    .borderradius(@radius, @radius, 0, 0);
-  }
   .link{
     font-size: 12px;
     margin-top: 40px;
@@ -220,11 +216,36 @@ main{
     padding: 30px 20px;
     margin-bottom: 40px;
   }
+  .fa-search{
+    color: @gray8;
+    background-color: #fff;
+    padding: 13px 20px 15px 10px;
+    margin-left: -4px;
+    .borderradius(@radius, @radius, 0, 0);
+    border-top: 1px solid @gray4;
+    border-right: 1px solid @gray4;
+    border-bottom: 1px solid @gray4;
+  }
+  .back{
+    a{
+      font-size: 14px;
+      color: @gray8;
+      &:hover{
+        color: @blue9;
+      }
+      i{
+        font-size: 10px;
+      }
+    }
+  }
   .heading{
     padding-bottom: 20px;
     border-bottom: 1px solid @gray1;
     .fas{
       color: @gray4;
+    }
+    &.open{
+      margin-bottom: 40px;
     }
   }
   ul{
