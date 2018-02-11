@@ -1,0 +1,72 @@
+<div class="aberto container">
+  <div class="row">
+    <div class="col-3 image">
+      <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.small}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
+    </div>
+    <div class="col-9">
+      <div class="row">
+        <div class="col-8">
+          <h2 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle}}</h2>
+          <h2 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h2>
+          <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+          <div class="frete">
+            <span>Calcular frete e prazo</span>
+            <div class="field">
+              <input class="input" type="text" placeholder="00000-000">
+              <button>Calcular</button>
+            </div>
+            <div class="text">
+              <span>Frete <strong>Grátis</strong> para todo o Brasil</span>
+              <span>Entrega de 7 a 10 dias úteis</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 preco">
+          <span class="original">De: R$29,90</span>
+          <span class="final">Por: R$19,90</span>
+          <span class="cartao"><strong>Cartão de Crédito:</strong> 1x R$ 19,90 ou em até 3x sem juros</span>
+          <span class="boleto"><strong>Boleto:</strong> R$ 15,90</span>
+          <a class="buttonbuy active" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        </div>
+      </div>
+      <div class="row infos">
+        <div class="col-12">
+          <div class="description">
+            <h3>Descrição</h3>
+            <p>{{book.volumeInfo.description}}</p>
+            <div ng-if="book.volumeInfo.categories" class="categoria">
+              <h4>Categoria</h4>
+              <p>{{book.volumeInfo.categories.join(", ")}}</p>
+            </div>
+            <div ng-if="book.volumeInfo.pageCount" class="paginas">
+              <h4>Quantidade de páginas</h4>
+              <p>{{book.volumeInfo.pageCount}}</p>
+            </div>
+            <div ng-if="book.volumeInfo.dimensions" class="tamanho">
+              <h4>Tamanho (cm)</h4>
+              <p>{{book.volumeInfo.dimensions.height}} x {{book.volumeInfo.dimensions.width}} x {{book.volumeInfo.dimensions.thickness}}</p>
+            </div>
+            <div ng-if="book.volumeInfo.language" class="idioma">
+              <h4>Idioma</h4>
+              <p ng-if="book.volumeInfo.language == 'en'">Inglês</p>
+              <p ng-if="book.volumeInfo.language == 'pt-BR'">Portugês Brasil</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <ul class="related">
+      <h5>Outros livros</h5>
+      <div class="row">
+        <li class="col">
+          <a class="book" href="livro.html">
+            <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
+            <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
+            <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
+          </a>
+          <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        </li>
+      </div>
+    </ul>
+</div>

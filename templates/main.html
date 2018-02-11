@@ -5,7 +5,7 @@
   <ul>
     <div class="row">
       <li class="col-3" data-ng-repeat="book in books">
-        <a class="book" href="livro.html#{{book.id}}">
+        <a class="book" href="#/book/{{book.id}}">
           <div class="thumbnail d-flex align-items-end">
             <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
           </div>
@@ -15,7 +15,7 @@
             <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
           </div>
         </a>
-        <a class="buttonbuy" href="checkout.html#{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        <a class="buttonbuy" href="#/checkout/{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
       </li>
     </div>
   </ul>

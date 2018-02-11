@@ -276,6 +276,9 @@ main ul li .thumbnail img {
 main ul li .infos {
   min-height: 86px;
 }
+.aberto .image img {
+  max-height: 300px;
+}
 .aberto span {
   display: block;
 }

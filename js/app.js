@@ -7,8 +7,9 @@ $routeProvider
     templateUrl: 'templates/main.html',
     controller: 'listaLivros'
   })
-  .when('/book', {
-    templateUrl: 'templates/book.html'
+  .when('/book/:id', {
+    templateUrl: 'templates/book.html',
+    controller: 'livroSingle'
   })
   .otherwise({
     redirectTo: '/'
@@ -33,3 +34,16 @@ myApp.controller('listaLivros', function($scope, $http){
   //Fim lista completa
 });
 //controller lista fim
+
+myApp.controller('livroSingle', function($scope, $http, $routeParams){
+  const idBook = $routeParams.id;
+  $http({
+    method: 'GET',
+    url: 'https://www.googleapis.com/books/v1/volumes/'+idBook
+  }).then(function (success){
+    $scope.book = success.data;
+    console.log(success.data);
+  },function (error){
+    console.log(error, 'Erro ao pegar as informacoes');
+  });
+});
