@@ -1,5 +1,11 @@
 var myApp = angular.module('desafio',['ngRoute']);
 
+function calculaFrete(){
+  $('.frete .field button').click(function(){
+    $('.frete .text').toggleClass('active');
+  })
+}
+
 //ngRoute inicio
 myApp.config(function ($routeProvider, $locationProvider) {
   $routeProvider
@@ -50,6 +56,7 @@ myApp.controller('listaLivros', function($scope, $http){
 //controller lista fim
 
 myApp.controller('livroSingle', function($scope, $http, $routeParams){
+  calculaFrete();
   const idBook = $routeParams.id;
   $http({
     method: 'GET',

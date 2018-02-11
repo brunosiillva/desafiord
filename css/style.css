@@ -166,6 +166,10 @@ a h3.name:hover {
   color: #868e96;
   padding: 14px 10px 12px 0;
   margin-left: -4px;
+  cursor: pointer;
+}
+.frete button:focus {
+  outline: none;
 }
 .frete .field,
 .frete .text {
@@ -173,11 +177,15 @@ a h3.name:hover {
   vertical-align: middle;
 }
 .frete .text {
+  display: none;
   margin-left: 5px;
 }
 .frete .text span {
   font-size: 12px;
   color: #343a40;
+}
+.frete .text.active {
+  display: inline-block;
 }
 .topo {
   background-image: url(../images/bg-topo.jpg);

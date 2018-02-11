@@ -166,16 +166,24 @@ a{
     color: @gray6;
     padding: 14px 10px 12px 0;
     margin-left: -4px;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+    }
   }
   .field, .text{
     display: inline-block;
     vertical-align: middle;
   }
   .text{
+    display: none;
     margin-left: 5px;
     span{
       font-size: 12px;
       color: @gray8;
+    }
+    &.active{
+      display: inline-block;
     }
   }
 }
