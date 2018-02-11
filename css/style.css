@@ -352,6 +352,11 @@ main ul li .book:hover h3 {
 }
 .payment h2 {
   margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ced4da;
+}
+.payment h3 {
+  color: #495057;
 }
 .payment p {
   font-weight: 300;
