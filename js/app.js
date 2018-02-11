@@ -1,7 +1,24 @@
 var myApp = angular.module('desafio',['ngRoute']);
 
-myApp.controller('listaLivros', ['$scope', '$http', function($scope, $http){
+//ngRoute inicio
+myApp.config(function ($routeProvider, $locationProvider) {
+$routeProvider
+  .when('/', {
+    templateUrl: 'templates/main.html',
+    controller: 'listaLivros'
+  })
+  .when('/book', {
+    templateUrl: 'templates/book.html'
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+  $locationProvider.hashPrefix('');
+});
+//ngRoute fim
 
+//controller lista inicio
+myApp.controller('listaLivros', function($scope, $http){
   //Pega infos da lista completa
   $http({
      method: 'GET',
@@ -14,5 +31,5 @@ myApp.controller('listaLivros', ['$scope', '$http', function($scope, $http){
     console.log(error, 'Erro ao pegar as informacoes');
   });
   //Fim lista completa
-
-}]);
+});
+//controller lista fim

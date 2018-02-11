@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
   <script src="js/app.js" charset="utf-8"></script>
 </head>
 <body>
@@ -26,29 +26,6 @@
       </div>
     </div>
   </div>
-  <main>
-    <div class="container" data-ng-controller="listaLivros">
-      <div class="heading d-flex justify-content-between">
-        <span><strong>{{books.length}}</strong> produto(s)</span>
-      </div>
-      <ul>
-        <div class="row">
-          <li class="col-3" data-ng-repeat="book in books">
-            <a class="book" href="livro.html#{{book.id}}">
-              <div class="thumbnail d-flex align-items-end">
-                <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
-              </div>
-              <div class="infos">
-                <h3 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle | limitTo: 50}}...</h3>
-                <h3 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h3>
-                <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
-              </div>
-            </a>
-            <a class="buttonbuy" href="checkout.html#{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-        </div>
-      </ul>
-    </div>
-  </main>
+  <main ng-view></main>
 </body>
 </html>
