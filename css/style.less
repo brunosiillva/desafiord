@@ -131,7 +131,6 @@ small{
   }
 }
 .frete{
-  margin-top: 50px;
   span{
     color: @gray8;
     display: block;
@@ -242,16 +241,24 @@ main{
 .aberto{
   span{
     display: block;
-    font-size: 14px;
-    color: @gray4;
+    &.original, &.cartao, &.boleto{
+      font-size: 12px;
+      color: @gray4;
+    }
     &.original{
       text-decoration-line: line-through;
     }
     &.final{
-      font-size: 30px;
+      font-size: 38px;
       color: @orange7;
       font-weight: 700;
     }
+  }
+  .buttonbuy{
+    margin-top: 69px;
+  }
+  .frete{
+    margin-top: 43px;
   }
   .description{
     margin-top: 40px;
@@ -318,9 +325,6 @@ main{
     text-align: right;
     font-size: 18px;
     font-weight: 700;
-  }
-  .frete{
-    margin-top: 0;
   }
 }
 .payment{
