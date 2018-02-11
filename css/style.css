@@ -319,10 +319,11 @@ main ul li .book:hover h3 {
 .checkout .product img {
   height: 100px;
 }
-.checkout .product .title {
+.checkout .product .title a {
   display: block;
   font-size: 18px;
   font-weight: 700;
+  color: #343a40;
 }
 .checkout .product .price {
   text-align: right;
