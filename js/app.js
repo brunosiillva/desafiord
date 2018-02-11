@@ -2,7 +2,7 @@ var myApp = angular.module('desafio',['ngRoute']);
 
 //ngRoute inicio
 myApp.config(function ($routeProvider, $locationProvider) {
-$routeProvider
+  $routeProvider
   .when('/', {
     templateUrl: 'templates/main.html',
     controller: 'listaLivros'
@@ -27,7 +27,7 @@ myApp.controller('listaLivros', function($scope, $http){
   }).then(function (success){
     $scope.books = success.data.items;
     // console.log(success.data.items, 'Informacoes pegas com sucesso');
-    console.log('Informacoes pegas com sucesso');
+    // console.log('Informacoes pegas com sucesso');
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
   });
@@ -42,7 +42,7 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
     url: 'https://www.googleapis.com/books/v1/volumes/'+idBook
   }).then(function (success){
     $scope.bookS = success.data;
-    console.log(success.data);
+    // console.log(success.data);
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
   });
