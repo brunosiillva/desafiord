@@ -327,8 +327,8 @@ main ul li .infos {
   font-weight: 700;
   color: #343a40;
 }
-.checkout .container {
-  padding-bottom: 40px;
+.checkout {
+  padding-bottom: 40px !important;
 }
 .checkout h2 {
   margin-bottom: 30px;

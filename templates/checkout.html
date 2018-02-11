@@ -1,0 +1,38 @@
+<div class="container checkout">
+  <h2>Meus Pedidos</h2>
+  <h3 class="subtitle">Produto(s)</h3>
+  <div class="row d-flex product">
+    <div class="col-2 align-self-center">
+      <img class="mx-auto d-block" data-ng-src="{{bookS.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
+    </div>
+    <div class="col-8 align-self-center">
+      <a ng-if="bookS.volumeInfo.subtitle" href="#/book/{{bookS.id}}"><h3 class="name">{{bookS.volumeInfo.title + " - " + bookS.volumeInfo.subtitle}}</h3></a>
+      <a ng-if="!bookS.volumeInfo.subtitle" href="#/book/{{bookS.id}}"><h3 class="name">{{bookS.volumeInfo.title}}</h3></a>
+      <small>Por {{bookS.volumeInfo.authors.join(", ")}} - {{bookS.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+    </div>
+    <div class="col-2 align-self-center price">
+      <span>R$ 19,90</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="total">Valor Total R$ 19,90</div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-between">
+    <div class="col frete">
+      <span>Calcular frete e prazo</span>
+      <div class="field">
+        <input class="input" type="text" placeholder="00000-000">
+        <button>Calcular</button>
+      </div>
+      <div class="text">
+        <span>Frete <strong>Grátis</strong> para todo o Brasil</span>
+        <span>Entrega de 7 a 10 dias úteis</span>
+      </div>
+    </div>
+    <div class="col-3">
+      <a class="buttonbuy btncheckout" href="finalizar.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
+    </div>
+  </div>
+</div>

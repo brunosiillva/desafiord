@@ -11,6 +11,10 @@ myApp.config(function ($routeProvider, $locationProvider) {
     templateUrl: 'templates/book.html',
     controller: 'livroSingle'
   })
+  .when('/checkout/:id', {
+    templateUrl: 'templates/checkout.html',
+    controller: 'livroSingle'
+  })
   .otherwise({
     redirectTo: '/'
   });
@@ -42,7 +46,7 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
     url: 'https://www.googleapis.com/books/v1/volumes/'+idBook
   }).then(function (success){
     $scope.bookS = success.data;
-    // console.log(success.data);
+    console.log(success.data);
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
   });
