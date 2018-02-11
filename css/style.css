@@ -277,6 +277,7 @@ main ul li .infos {
   min-height: 86px;
 }
 .aberto .image img {
+  max-width: 200px;
   max-height: 300px;
 }
 .aberto span {

@@ -1,14 +1,14 @@
 <div class="aberto container">
   <div class="row">
     <div class="col-3 image">
-      <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.small}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
+      <img class="mx-auto d-block" ng-src="{{bookS.volumeInfo.imageLinks.small}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
     </div>
     <div class="col-9">
       <div class="row">
         <div class="col-8">
-          <h2 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle}}</h2>
-          <h2 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h2>
-          <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+          <h2 ng-if="bookS.volumeInfo.subtitle" class="name">{{bookS.volumeInfo.title + " - " + bookS.volumeInfo.subtitle}}</h2>
+          <h2 ng-if="!bookS.volumeInfo.subtitle" class="name">{{bookS.volumeInfo.title}}</h2>
+          <small>Por {{bookS.volumeInfo.authors.join(", ")}} - {{bookS.volumeInfo.publishedDate | date :  "yyyy"}}</small>
           <div class="frete">
             <span>Calcular frete e prazo</span>
             <div class="field">
@@ -33,39 +33,44 @@
         <div class="col-12">
           <div class="description">
             <h3>Descrição</h3>
-            <p>{{book.volumeInfo.description}}</p>
-            <div ng-if="book.volumeInfo.categories" class="categoria">
+            <p>{{bookS.volumeInfo.description}}</p>
+            <div ng-if="bookS.volumeInfo.categories" class="categoria">
               <h4>Categoria</h4>
-              <p>{{book.volumeInfo.categories.join(", ")}}</p>
+              <p>{{bookS.volumeInfo.categories.join(", ")}}</p>
             </div>
-            <div ng-if="book.volumeInfo.pageCount" class="paginas">
+            <div ng-if="bookS.volumeInfo.pageCount" class="paginas">
               <h4>Quantidade de páginas</h4>
-              <p>{{book.volumeInfo.pageCount}}</p>
+              <p>{{bookS.volumeInfo.pageCount}}</p>
             </div>
-            <div ng-if="book.volumeInfo.dimensions" class="tamanho">
+            <div ng-if="bookS.volumeInfo.dimensions" class="tamanho">
               <h4>Tamanho (cm)</h4>
-              <p>{{book.volumeInfo.dimensions.height}} x {{book.volumeInfo.dimensions.width}} x {{book.volumeInfo.dimensions.thickness}}</p>
+              <p>{{bookS.volumeInfo.dimensions.height}} x {{bookS.volumeInfo.dimensions.width}} x {{bookS.volumeInfo.dimensions.thickness}}</p>
             </div>
-            <div ng-if="book.volumeInfo.language" class="idioma">
+            <div ng-if="bookS.volumeInfo.language" class="idioma">
               <h4>Idioma</h4>
-              <p ng-if="book.volumeInfo.language == 'en'">Inglês</p>
-              <p ng-if="book.volumeInfo.language == 'pt-BR'">Portugês Brasil</p>
+              <p ng-if="bookS.volumeInfo.language == 'en'">Inglês</p>
+              <p ng-if="bookS.volumeInfo.language == 'pt-BR'">Portugês Brasil</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-    <ul class="related">
+    <ul class="related" data-ng-controller="listaLivros">
       <h5>Outros livros</h5>
       <div class="row">
-        <li class="col">
-          <a class="book" href="livro.html">
-            <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-            <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-            <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
+        <li class="col" data-ng-repeat="book in books | limitTo: 5" data-ng-if="book.volumeInfo.title != bookS.volumeInfo.title">
+          <a class="book" href="#/book/{{book.id}}">
+            <div class="thumbnail d-flex align-items-end">
+              <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
+            </div>
+            <div class="infos">
+              <h3 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle | limitTo: 50}}...</h3>
+              <h3 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h3>
+              <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+            </div>
           </a>
-          <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
+          <a class="buttonbuy" href="#/checkout/{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
         </li>
       </div>
     </ul>

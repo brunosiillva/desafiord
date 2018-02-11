@@ -41,7 +41,7 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
     method: 'GET',
     url: 'https://www.googleapis.com/books/v1/volumes/'+idBook
   }).then(function (success){
-    $scope.book = success.data;
+    $scope.bookS = success.data;
     console.log(success.data);
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
