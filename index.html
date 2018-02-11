@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-ng-app="desafio">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+  <script src="js/app.js" charset="utf-8"></script>
 </head>
 <body>
   <div class="topo">
     <div class="container">
       <div class="row d-flex align-items-center">
         <div class="content">
-          <h1>A maior coleção de livros sobre <strong>Star Wars</strong> você encontra aqui!</h1>
+          <h1>A maior coleção de livros sobre <strong>Star Wars</strong> você encontra aqui! {{name}}</h1>
           <div class="search">
-            <input class="input" type="text" value="" placeholder="Qual livro você está procurando?">
+            <input class="input" data-ng-model="name" type="text" value="" placeholder="Qual livro você está procurando?">
             <i class="fas fa-search"></i>
           </div>
         </div>
