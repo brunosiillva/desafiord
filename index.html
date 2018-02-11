@@ -37,9 +37,11 @@
               <div class="thumbnail d-flex align-items-end">
                 <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
               </div>
-              <h3 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle | limitTo: 50}}...</h3>
-              <h3 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h3>
-              <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+              <div class="infos">
+                <h3 ng-if="book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title + " - " + book.volumeInfo.subtitle | limitTo: 50}}...</h3>
+                <h3 ng-if="!book.volumeInfo.subtitle" class="name">{{book.volumeInfo.title}}</h3>
+                <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
+              </div>
             </a>
             <a class="buttonbuy" href="checkout.html#{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
           </li>

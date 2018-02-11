@@ -263,6 +263,19 @@ main ul li {
 main ul li h3 {
   margin-top: 30px;
 }
+main ul li h3 i {
+  font-style: normal;
+}
+main ul li .thumbnail {
+  min-height: 200px;
+}
+main ul li .thumbnail img {
+  vertical-align: bottom;
+  max-height: 200px;
+}
+main ul li .infos {
+  min-height: 86px;
+}
 .aberto span {
   display: block;
 }
