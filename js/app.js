@@ -15,11 +15,22 @@ myApp.config(function ($routeProvider, $locationProvider) {
     templateUrl: 'templates/checkout.html',
     controller: 'livroSingle'
   })
+  .when('/payments', {
+    templateUrl: 'templates/payments.html'
+  })
+  .when('/success', {
+    templateUrl: 'templates/success.html'
+  })
   .otherwise({
     redirectTo: '/'
   });
   $locationProvider.hashPrefix('');
 });
+myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function() {
+    console.log($location.path());
+  });
+}]);
 //ngRoute fim
 
 //controller lista inicio
