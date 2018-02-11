@@ -37,6 +37,12 @@ small {
   display: block;
   width: 100%;
 }
+a h3.name {
+  color: #343a40;
+}
+a h3.name:hover {
+  color: #1864ab;
+}
 .buttonbuy {
   color: #ced4da;
   text-align: center;
@@ -256,10 +262,6 @@ main ul li {
 }
 main ul li h3 {
   margin-top: 30px;
-  color: #343a40;
-}
-main ul li .book:hover h3 {
-  color: #1864ab;
 }
 .aberto span {
   display: block;
@@ -313,7 +315,7 @@ main ul li .book:hover h3 {
 .checkout h2 {
   margin-bottom: 30px;
 }
-.checkout h3 {
+.checkout .subtitle {
   width: 100%;
   border-bottom: 1px solid #ced4da;
   padding-bottom: 20px;
@@ -325,12 +327,6 @@ main ul li .book:hover h3 {
 }
 .checkout .product img {
   height: 100px;
-}
-.checkout .product .title a {
-  display: block;
-  font-size: 18px;
-  font-weight: 700;
-  color: #343a40;
 }
 .checkout .product .price {
   text-align: right;

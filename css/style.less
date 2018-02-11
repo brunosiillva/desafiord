@@ -91,6 +91,16 @@ small{
   display: block;
   width: 100%;
 }
+a{
+  h3{
+    &.name{
+      color: @gray8;
+      &:hover{
+        color: @blue9;
+      }
+    }
+  }
+}
 .buttonbuy{
   color: @gray4;
   text-align: center;
@@ -226,14 +236,6 @@ main{
       padding-bottom: 40px;
       h3{
         margin-top: 30px;
-        color: @gray8;
-      }
-      .book{
-        &:hover{
-          h3{
-            color: @blue9;
-          }
-        }
       }
     }
   }
@@ -290,7 +292,7 @@ main{
   h2{
     margin-bottom: 30px;
   }
-  h3{
+  .subtitle{
     width: 100%;
     border-bottom: 1px solid @gray4;
     padding-bottom: 20px;
@@ -302,14 +304,14 @@ main{
     img{
       height: 100px;
     }
-    .title{
-      a{
-        display: block;
-        font-size: 18px;
-        font-weight: 700;
-        color: @gray8;
-      }
-    }
+    // .title{
+    //   a{
+    //     display: block;
+    //     font-size: 18px;
+    //     font-weight: 700;
+    //     color: @gray8;
+    //   }
+    // }
     .price{
       text-align: right;
       font-weight: 700;
