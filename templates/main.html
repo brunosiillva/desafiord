@@ -15,7 +15,7 @@
             <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
           </div>
         </a>
-        <a class="buttonbuy" href="#/checkout/{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
+        <a class="buttonbuy" data-ng-href="#/checkout/{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
       </li>
     </div>
   </ul>
