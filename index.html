@@ -28,7 +28,7 @@
   <main>
     <div class="container" data-ng-controller="listaLivros">
       <div class="heading d-flex justify-content-between">
-        <span><strong>11</strong> produto(s)</span>
+        <span><strong>{{books.length}}</strong> produto(s)</span>
         <span>
           <i class="fas fa-th-large"></i>
           <i class="fas fa-th-list"></i>
@@ -36,71 +36,13 @@
       </div>
       <ul>
         <div class="row">
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
+          <li class="col-3" data-ng-repeat="book in books">
+            <a class="book" href="livro.html#{{book.id}}">
+              <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
+              <h3 class="name">{{book.volumeInfo.title}}</h3>
+              <small>Por {{book.volumeInfo.authors.join(", ")}} - {{book.volumeInfo.publishedDate | date :  "yyyy"}}</small>
             </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-        </div>
-        <div class="row">
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
-          </li>
-          <li class="col">
-            <a class="book" href="livro.html">
-              <img class="mx-auto d-block" src="images/livro.jpg" alt="" title="Finding the Force of the Star Wars Franchise">
-              <h3 class="name">Finding the Force of the Star Wars Franchise</h3>
-              <small>Por Matthew Kapell, John Shelton Lawrence - 2006</small>
-            </a>
-            <a class="buttonbuy" href="checkout.html"><i class="fas fa-shopping-cart"></i> Comprar</a>
+            <a class="buttonbuy" href="checkout.html#{{book.id}}"><i class="fas fa-shopping-cart"></i> Comprar</a>
           </li>
         </div>
       </ul>

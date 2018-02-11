@@ -7,10 +7,10 @@ myApp.controller('listaLivros', ['$scope', '$http', function($scope, $http){
      method: 'GET',
      url: 'https://www.googleapis.com/books/v1/volumes?q=star+wars'
   }).then(function (success){
-    $scope.data = success;
-    console.log(success);
+    $scope.books = success.data.items;
+    console.log(success.data.items, 'Informacoes pegas com sucesso');
   },function (error){
-
+    console.log(error, 'Erro ao pegar as informacoes');
   });
   //Fim lista completa
 
