@@ -411,6 +411,11 @@ main ul li .infos {
   color: #868e96;
   width: 100%;
 }
+.payment .boleto {
+  max-height: 90px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 .payment .input {
   margin-top: 0;
   width: 100%;
