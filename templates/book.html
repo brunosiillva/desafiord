@@ -17,7 +17,7 @@
           <div class="frete">
             <span>Calcular frete e prazo</span>
             <div class="field">
-              <input class="input" type="text" placeholder="00000-000">
+              <input class="input" type="text" placeholder="00000-000" ng-model="maskCEP" mask='00000-000'>
               <button>Calcular</button>
             </div>
             <div class="text">
@@ -38,7 +38,7 @@
         <div class="col-12">
           <div class="description">
             <h3>Descrição</h3>
-            <p>{{bookS.volumeInfo.description}}</p>
+            <p>{{bookS.volumeInfo.description | removeHTMLTags}}</p>
             <div ng-if="bookS.volumeInfo.categories" class="categoria">
               <h4>Categoria</h4>
               <p>{{bookS.volumeInfo.categories.join(", ")}}</p>

@@ -1,4 +1,4 @@
-var myApp = angular.module('desafio',['ngRoute']);
+var myApp = angular.module('desafio',['ngRoute', 'ngMask']);
 
 function calculaFrete(){
   $('.frete .field button').click(function(){
@@ -39,6 +39,14 @@ myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $locat
 }]);
 //ngRoute fim
 
+
+//inicio Filtro para remover tags html das strings
+myApp.filter('removeHTMLTags', function () { //removeHTMLTags is the filter name
+   return function (text) {
+     return text ? String(text).replace(/<[^>]+>/gm, '') : ''; // used regular expression
+   };
+ })
+//fim Foltro para remover tags html das strings
 //controller lista inicio
 myApp.controller('listaLivros', function($scope, $http){
   //Pega infos da lista completa
@@ -63,7 +71,7 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
     url: 'https://www.googleapis.com/books/v1/volumes/'+idBook
   }).then(function (success){
     $scope.bookS = success.data;
-    console.log(success.data);
+    // console.log(success.data);
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
   });
