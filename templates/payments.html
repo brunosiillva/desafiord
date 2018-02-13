@@ -71,7 +71,7 @@
           <input class="form-check-input" type="radio" name="payments" id="boleto" value="boleto">
           <label class="form-check-label" for="boleto">
             <h3>Boleto</h3>
-            <p>Ao selecionar essa opção o boleto será enviado para o seu e-mail cadastrado ou você pode <a href="">clicar aqui</a> e imprimir o boleto</p>
+            <p>Ao selecionar essa opção o boleto será enviado para o seu e-mail cadastrado ou você pode <a href="" disable>clicar aqui</a> e imprimir o boleto</p>
           </label>
         </div>
         <div class="form-check">
@@ -79,22 +79,22 @@
           <label class="form-check-label" for="cartao">
             <h3>Cartão de Crédito</h3>
             <p>Preencha os campos abaixos para pagar com cartão.</p>
-            <div class="form-row">
+            <div id="formcartao" class="form-row">
               <div class="form-group col-12">
                 <label for="numero" class="">Número do Cartão</label>
-                <input type="text" class="form-control input form" id="numero" placeholder="0000 0000 0000 0000 00" ng-model="maskNumberCard" mask='0000 0000 0000 0000 00'>
+                <input type="text" class="form-control input form" id="numero" placeholder="0000 0000 0000 0000 00" ng-model="maskNumberCard" mask='0000 0000 0000 0000 00' disabled>
               </div>
               <div class="form-group col-12">
                 <label for="nomec" class="">Nome no Cartão</label>
-                <input type="text" class="form-control input form" id="nomec" placeholder="Nome no Cartão">
+                <input type="text" class="form-control input form" id="nomec" placeholder="Nome no Cartão" disabled>
               </div>
               <div class="form-group col-4">
                 <label for="seguranca" class="">Cód. de Segurança</label>
-                <input type="text" class="form-control input form" id="seguranca" placeholder="Cód. Segurança" ng-model="maskSegu" mask='000'>
+                <input type="text" class="form-control input form" id="seguranca" placeholder="Cód. Segurança" ng-model="maskSegu" mask='000' disabled>
               </div>
               <div class="form-group col-4">
                 <label for="mes" class="">Mês de Validade</label>
-                <select id="mes" class="form-control input form select">
+                <select id="mes" class="form-control input form select" disabled>
                   <option value="01" selected>01</option>
                   <option value="02">02</option>
                   <option value="03">03</option>
@@ -111,7 +111,7 @@
               </div>
               <div class="form-group col-4">
                 <label for="ano" class="">Ano de Validade</label>
-                <select id="ano" class="form-control input form select">
+                <select id="ano" class="form-control input form select" disabled>
                   <option value="2021" selected>2021</option>
                   <option value="2020">2020</option>
                   <option value="2019">2019</option>

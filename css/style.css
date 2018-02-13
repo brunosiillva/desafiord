@@ -394,6 +394,7 @@ main ul li .infos {
 }
 .payment h3 {
   color: #495057;
+  cursor: pointer;
 }
 .payment p {
   font-weight: 300;

@@ -6,6 +6,23 @@ function calculaFrete(){
   })
 }
 
+function habilitaPagamento(){
+  $('#cartao').click(function(){
+    $('#boleto a').click(function(){
+      return false;
+    });
+    $('#formcartao input').prop("disabled", false);
+    $('#formcartao select').prop("disabled", false);
+  });
+  $('#boleto').click(function(){
+    $('#boleto a').click(function(){
+      return true;
+    });
+    $('#formcartao input').prop("disabled", true);
+    $('#formcartao select').prop("disabled", true);
+  });
+}
+
 //ngRoute inicio
 myApp.config(function ($routeProvider, $locationProvider) {
   $routeProvider
@@ -22,7 +39,8 @@ myApp.config(function ($routeProvider, $locationProvider) {
     controller: 'livroSingle'
   })
   .when('/payments', {
-    templateUrl: 'templates/payments.html'
+    templateUrl: 'templates/payments.html',
+    controller: 'livroPagamento'
   })
   .when('/success', {
     templateUrl: 'templates/success.html'
@@ -38,7 +56,6 @@ myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $locat
   });
 }]);
 //ngRoute fim
-
 
 //inicio Filtro para remover tags html das strings
 myApp.filter('removeHTMLTags', function () { //removeHTMLTags is the filter name
@@ -75,4 +92,8 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
   },function (error){
     console.log(error, 'Erro ao pegar as informacoes');
   });
+});
+
+myApp.controller('livroPagamento', function($scope){
+  habilitaPagamento();
 });
