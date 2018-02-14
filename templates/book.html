@@ -5,12 +5,12 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-3 image">
-      <img class="mx-auto d-block" data-ng-src="{{bookS.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
+    <div class="col-12 col-md-3 image">
+      <img class="mx-auto d-block img-fluid" data-ng-src="{{bookS.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
     </div>
-    <div class="col-9">
+    <div class="col-12 col-md-9">
       <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-md-8">
           <h2 ng-if="bookS.volumeInfo.subtitle" class="name">{{bookS.volumeInfo.title + " - " + bookS.volumeInfo.subtitle}}</h2>
           <h2 ng-if="!bookS.volumeInfo.subtitle" class="name">{{bookS.volumeInfo.title}}</h2>
           <small>Por {{bookS.volumeInfo.authors.join(", ")}} - {{bookS.volumeInfo.publishedDate | date :  "yyyy"}}</small>
@@ -26,7 +26,7 @@
             </div>
           </div>
         </div>
-        <div class="col-4 preco">
+        <div class="col-12 col-md-4 preco">
           <span class="original">De: R$29,90</span>
           <span class="final">Por: R$19,90</span>
           <span class="cartao"><strong>Cartão de Crédito:</strong> 1x R$ 19,90 ou em até 3x sem juros</span>

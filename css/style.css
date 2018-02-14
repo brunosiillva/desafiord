@@ -304,8 +304,6 @@ main ul li .infos {
 }
 .aberto .image img {
   width: 200px;
-  max-width: 200px;
-  max-height: 300px;
 }
 .aberto span {
   display: block;
@@ -468,5 +466,14 @@ main ul li .infos {
   }
   main ul li .thumbnail {
     min-height: auto;
+  }
+  .aberto h2 {
+    margin-top: 40px;
+  }
+  .aberto .preco {
+    margin-top: 40px;
+  }
+  .aberto .buttonbuy {
+    margin-top: 0;
   }
 }
