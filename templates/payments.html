@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-12 col-md-6">
       <h2>Dados Pessoais</h2>
       <form action="">
         <div class="form-group">
@@ -25,11 +25,11 @@
           <input type="text" class="form-control input form" id="endereco" placeholder="Endereço">
         </div>
         <div class="form-row">
-          <div class="form-group col-10">
+          <div class="form-group col-12 col-md-10">
             <label for="cidade">Cidade</label>
             <input type="text" class="form-control input form" id="cidade" placeholder="Cidade">
           </div>
-          <div class="form-group col-2">
+          <div class="form-group col-12 col-md-2">
             <label for="uf">UF</label>
             <select id="uf" class="form-control input form select">
               <option value="AC" selected>AC</option>
@@ -73,7 +73,7 @@
             <label class="form-check-label" for="boleto">
               <h3>Boleto</h3>
               <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                   <p>Ao selecionar essa opção o boleto será enviado para o seu e-mail cadastrado ou você pode <a href="images/boleto.pdf" target="_blank" disable>clicar aqui</a> e imprimir o boleto</p>
                 </div>
                 <div class="col">
@@ -97,11 +97,11 @@
                 <label for="nomec" class="">Nome no Cartão</label>
                 <input type="text" class="form-control input form" id="nomec" placeholder="Nome no Cartão" disabled>
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-12 col-md-4">
                 <label for="seguranca" class="">Cód. de Segurança</label>
                 <input type="text" class="form-control input form" id="seguranca" placeholder="Cód. Segurança" ng-model="maskSegu" mask='000' disabled>
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-12 col-md-4">
                 <label for="mes" class="">Mês de Validade</label>
                 <select id="mes" class="form-control input form select" disabled>
                   <option value="01" selected>01</option>
@@ -118,7 +118,7 @@
                   <option value="12">12</option>
                 </select>
               </div>
-              <div class="form-group col-4">
+              <div class="form-group col-12 col-md-4">
                 <label for="ano" class="">Ano de Validade</label>
                 <select id="ano" class="form-control input form select" disabled>
                   <option value="2021" selected>2021</option>
@@ -134,7 +134,7 @@
     </div>
   </div>
   <div class="row d-flex flex-row-reverse">
-    <div class="col-3">
+    <div class="col-12 col-md-3">
       <a class="buttonbuy btncheckout" data-ng-href="#/success">Finalizar</a>
     </div>
   </div>

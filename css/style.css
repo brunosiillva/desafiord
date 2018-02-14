@@ -407,7 +407,6 @@ main ul li .infos {
   width: 100%;
 }
 .payment .boleto {
-  max-height: 90px;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -460,6 +459,9 @@ main ul li .infos {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+  }
+  main .search .input {
+    width: 200px;
   }
   main ul li .thumbnail {
     min-height: auto;
