@@ -7,15 +7,15 @@
   <h2>Meus Pedidos</h2>
   <h3 class="subtitle">Produto(s)</h3>
   <div class="row d-flex product">
-    <div class="col-2 align-self-center">
-      <img class="mx-auto d-block" data-ng-src="{{bookS.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
+    <div class="col-12 col-md-2 align-self-center">
+      <img class="mx-auto d-block img-fluid" data-ng-src="{{bookS.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{bookS.volumeInfo.title}}">
     </div>
-    <div class="col-8 align-self-center">
+    <div class="col-12 col-md-8 align-self-center">
       <a ng-if="bookS.volumeInfo.subtitle" href="#/book/{{bookS.id}}"><h3 class="name">{{bookS.volumeInfo.title + " - " + bookS.volumeInfo.subtitle}}</h3></a>
       <a ng-if="!bookS.volumeInfo.subtitle" href="#/book/{{bookS.id}}"><h3 class="name">{{bookS.volumeInfo.title}}</h3></a>
       <small>Por {{bookS.volumeInfo.authors.join(", ")}} - {{bookS.volumeInfo.publishedDate | date :  "yyyy"}}</small>
     </div>
-    <div class="col-2 align-self-center price">
+    <div class="col-12 col-md-2 align-self-center price">
       <span>R$ 19,90</span>
     </div>
   </div>
@@ -36,7 +36,7 @@
         <span>Entrega de 7 a 10 dias úteis</span>
       </div>
     </div>
-    <div class="col-3">
+    <div class="col-12 col-md-3">
       <a class="buttonbuy btncheckout" href="#/payments"><i class="fas fa-shopping-cart"></i> Comprar</a>
     </div>
   </div>

@@ -364,9 +364,6 @@ main ul li .infos {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.checkout .product img {
-  height: 100px;
-}
 .checkout .product .price {
   text-align: right;
   font-weight: 700;
@@ -474,6 +471,15 @@ main ul li .infos {
     margin-top: 40px;
   }
   .aberto .buttonbuy {
-    margin-top: 0;
+    margin-top: 10px;
+  }
+  .checkout h3 {
+    margin-top: 10px;
+  }
+  .checkout .product .price {
+    text-align: left;
+  }
+  .checkout .total {
+    text-align: left;
   }
 }
