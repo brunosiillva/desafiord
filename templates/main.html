@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="heading d-flex justify-content-between align-items-center">
+  <div class="heading d-md-flex justify-content-md-between align-items-center">
     <span><strong>{{bookQ.length}}</strong> produto(s)</span>
     <div class="search">
       <input class="input" data-ng-model="bookSearch" type="text" value="" placeholder="Qual livro você está procurando?">
@@ -8,8 +8,7 @@
   </div>
   <ul>
     <div class="row">
-      <!-- <li class="col-3" data-ng-repeat="book in books | filter:bookSearch"> -->
-      <li class="col-3" data-ng-repeat="book in books | filter:bookSearch as bookQ">
+      <li class="col-12 col-md-3" data-ng-repeat="book in books | filter:bookSearch as bookQ">
         <a class="book" href="#/book/{{book.id}}">
           <div class="thumbnail d-flex align-items-end">
             <img class="mx-auto d-block" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="Imagem da capa do livro" title="{{book.volumeInfo.title}}">
