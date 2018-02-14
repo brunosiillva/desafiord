@@ -1,11 +1,13 @@
 var myApp = angular.module('desafio',['ngRoute', 'ngMask']);
 
+//funcao de "calcular" o frete
 function calculaFrete(){
   $('.frete .field button').click(function(){
     $('.frete .text').toggleClass('active');
   })
 }
 
+//funcao de habilitar/desabilitar modos de pagamento
 function habilitaPagamento(){
   $('#cartao').click(function(){
     $('#boleto a').click(function(){
@@ -50,6 +52,7 @@ myApp.config(function ($routeProvider, $locationProvider) {
   });
   $locationProvider.hashPrefix('');
 });
+//joga para o scope a rota atual
 myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $location, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function() {
     $rootScope.currentRoute = $location.path();
@@ -60,10 +63,11 @@ myApp.run(['$rootScope','$location', '$routeParams', function($rootScope, $locat
 //inicio Filtro para remover tags html das strings
 myApp.filter('removeHTMLTags', function () { //removeHTMLTags is the filter name
    return function (text) {
-     return text ? String(text).replace(/<[^>]+>/gm, '') : ''; // used regular expression
+     return text ? String(text).replace(/<[^>]+>/gm, '') : ''; //regular expression
    };
  })
-//fim Foltro para remover tags html das strings
+//fim Filtro para remover tags html das strings
+
 //controller lista inicio
 myApp.controller('listaLivros', function($scope, $http){
   //Pega infos da lista completa
@@ -80,6 +84,7 @@ myApp.controller('listaLivros', function($scope, $http){
 });
 //controller lista fim
 
+//controller livro detalhes inicio
 myApp.controller('livroSingle', function($scope, $http, $routeParams){
   calculaFrete();
   const idBook = $routeParams.id;
@@ -93,7 +98,10 @@ myApp.controller('livroSingle', function($scope, $http, $routeParams){
     console.log(error, 'Erro ao pegar as informacoes');
   });
 });
+//controller livro detalhes fim
 
+//controller pagamentos inicio
 myApp.controller('livroPagamento', function($scope){
   habilitaPagamento();
 });
+//controller pagamentos inicio
